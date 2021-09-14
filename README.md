@@ -1,2 +1,2 @@
-# Panda_monium
+# Panda-monium
 Serialize + compress Pandas DataFrames.
