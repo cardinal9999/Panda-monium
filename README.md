@@ -16,4 +16,12 @@ pm.compress(data, file) #Should return "Success!"
 loaded = pm.decompress(file)
 ```
 ## How it works
-Panda-monium works by converting DataFrames into CSV files and replacing substrings (such as a comma next to a number) into 1 character. The larger the data, the more likely it is for compression to work.
+Panda-monium works by converting DataFrames into CSV files and replacing substrings (such as a comma next to a number) into 1 character. The larger the data, the more likely it is for compression to work. It removes the annoying Unnamed: 0 column by removing it during decompression.
+## Collisions
+A collision is when one of the DataFrame's strings contains a Panda-monium "keyword" or the replacing character during compression (Panda-monium has been designed to prevent collisions by replacing a comma next to any number with a character that isn't on the keyboard. This makes it unlikely for collisions to happen).
+
+Collisions can cause the DataFrame to become unstable and have weird dimensions, which can cause errors. 
+### Preventing Collisions
+Collisions can be prevented by using characters that the system can't show (such as )
+
+However, there is a small chance that the symbol (that GitHub can't display) gets in the DataFrame. The solution? Escape characters. They will be added in future versions. 
