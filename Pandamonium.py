@@ -9,11 +9,11 @@ import pandas
 def compress(dataframe, file_):
     csv = dataframe.to_csv()
     
-    csv = csv.replace(",1", "¹")
+    csv = csv.replace(",1", chr(11))
     csv = csv.replace(",2", "º")
     csv = csv.replace(",3", chr(127))
     csv = csv.replace(",4", "¦")
-    csv = csv.replace(",5", "¯")
+    csv = csv.replace(",5", chr(15))
     csv = csv.replace(",6", "«")
     csv = csv.replace(",8", chr(18))
     csv = csv.replace(",9", chr(19))
@@ -28,10 +28,10 @@ def decompress(file):
     a = a.read().decode(encoding="UTF-8")
     a = a.replace("«", ",6")
     a = a.replace("¦", ",4")
-    a = a.replace("¹", ",1")
+    a = a.replace(chr(11), ",1")
     a = a.replace("º", ",2")
     a = a.replace(chr(127), ",3")[1:]
-    a = a.replace("¯", ",5")
+    a = a.replace(chr(15), ",5")
     a = a.replace(chr(17), ",7")
     a = a.replace(chr(18), ",8")
     a = a.replace(chr(19), ",9")
