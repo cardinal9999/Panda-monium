@@ -42,9 +42,10 @@ def decompress(file):
     return df
 if __name__ == "__main__":
     import time
+    import getpass
     a = pandas.DataFrame({"Test 1-3": [12, 23, 34], "Test 4-6": [48, 65, 53], "Test 7-9": [93, 88, 70]})
     print(compress(dataframe=a, file_="C:/Users/jacob/Desktop/testing.pdc"))
     time.sleep(15)
     print("Waiting...")
-    print(decompress("C:/Users/jacob/Desktop/testing.pdc"))
+    print(decompress(f"C:/Users/{getpass.getuser()}/Desktop/testing.pdc"))
     ""
