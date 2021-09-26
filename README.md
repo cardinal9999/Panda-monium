@@ -2,6 +2,8 @@
 Panda-monium lets you serialize + compress Pandas DataFrames. So far, the only way to serialize DataFrames was to use pickle (which takes lots of space on your computer) and converting to CSV files (which can create the [Unnamed: 0 column](https://stackoverflow.com/questions/36519086/how-to-get-rid-of-unnamed-0-column-in-a-pandas-dataframe))
 
 ![](logo.png)
+
+[![Not Maintained](https://img.shields.io/badge/Maintenance%20Level-Not%20Maintained-yellow.svg)](https://gist.github.com/cheerfulstoic/d107229326a01ff0f333a1d3476e068d)
 ## Tutorial
 ```py
 import pandas as pd
