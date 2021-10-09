@@ -2,7 +2,7 @@
 
 [![Inactively Maintained](https://img.shields.io/badge/Maintenance%20Level-Inactively%20Maintained-yellowgreen.svg)](https://gist.github.com/cheerfulstoic/d107229326a01ff0f333a1d3476e068d)
 
-Panda-monium lets you serialize + compress Pandas DataFrames. So far, the only way to serialize DataFrames was to use pickle (which takes lots of space on your computer) and converting to CSV files (which can create the [Unnamed: 0 column](https://stackoverflow.com/questions/36519086/how-to-get-rid-of-unnamed-0-column-in-a-pandas-dataframe))
+Panda-monium lets you serialize + compress Pandas DataFrames. It uses CSVs to serialize and [Goose](https://github.com/cardinal9999/goose) to compress DataFrames. So far, the only way to serialize DataFrames was to use pickle (which takes lots of space on your computer) and converting to CSV files (which can create the [Unnamed: 0 column](https://stackoverflow.com/questions/36519086/how-to-get-rid-of-unnamed-0-column-in-a-pandas-dataframe))
 
 ![](logo.png)
 
