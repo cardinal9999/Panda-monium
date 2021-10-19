@@ -14,7 +14,7 @@ def compress(dataframe, file_):
     csv = csv.replace(",3", chr(127))
     csv = csv.replace(",4", "¦")
     csv = csv.replace(",5", chr(15))
-    csv = csv.replace(",6", "«")
+    csv = csv.replace(",6", chr(26))
     csv = csv.replace(",8", chr(18))
     csv = csv.replace(",9", chr(19))
     csv = csv.replace(",7", chr(17)).encode(encoding="UTF-8")
@@ -26,7 +26,7 @@ def compress(dataframe, file_):
 def decompress(file):
     a = open(file, "rb")
     a = a.read().decode(encoding="UTF-8")
-    a = a.replace("«", ",6")
+    a = a.replace(chr(26), ",6")
     a = a.replace("¦", ",4")
     a = a.replace(chr(11), ",1")
     a = a.replace("º", ",2")
