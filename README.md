@@ -8,6 +8,7 @@ Panda-monium lets you serialize + compress Pandas DataFrames. It uses CSVs to se
 
 
 ## Tutorial
+Example:
 ```py
 import pandas as pd
 import Pandamonium as pm #Keep the uppercase
